@@ -1,0 +1,127 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://images.pexels.com/photos/2049422/pexels-photo-2049422.jpeg?auto=compress&cs=tinysrgb&w=1500);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+li{
+    list-style: none;
+    cursor:none;
+}
+a{
+    text-decoration: none;
+}
+
+button{
+    background-color: green;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: azure;
+    border: 1px solid red;
+    border-radius: 10px;
+    font-weight: 400;
+    width: fit-content;
+
+}
+button:hover{
+    background:white;
+    color: black;
+    border: solid 1px blue;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.logo{
+    height: 100px;
+    width: 100px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: 400;
+}
+nav ul li:hover{
+    text-decoration: underline;
+    font-weight: 900;
+}
+.search-button{
+    display: flex;
+    gap: 30px;
+}
+input{
+    padding: 10px 15px;
+}
+.main-section{
+    display: flex;
+    align-items: center;
+}
+.main-left-section h1{
+font-size: 40px;
+margin-bottom: 20px;
+font-weight: 700;
+width: 600px;
+}
+
+.main-left-section h1 span{
+    color:blueviolet;
+    font-weight: 900;
+    font-size: 2.5 rem;
+}
+.main-left-section p{
+    font-weight: 500;
+}
+.main-left-section p span{
+    color: blueviolet;
+    font-weight: 400;
+    font-size: 20px;
+}
+.main-right-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+width: 200%;
+}
+.main-right-section img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+footer{
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-around;
+}
+footer p{
+    font-size: 700;
+}
+footer ul{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+
+    
+}
+footer ul li a i:hover{
+    background-color: aliceblue;
+    color: green;
+}

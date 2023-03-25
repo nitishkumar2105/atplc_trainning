@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+</head>
+<style>
+    .cont{
+
+        /* display likhne ke baad hi flex code apply hota hai */
+display: flex;
+
+
+border: 1px solid green;
+/* flex-direction: column-reverse; */
+/* flex-wrap: wrap; */
+
+/* box ko center me kar deta hai */
+/* justify-content: center; */
+
+/* box ke bich me space de deta hai */
+/* justify-content: space-around; */
+
+
+/* box ko center me lata hai */
+align-items: center;
+
+
+
+/*  box ke bich me gap kr deta hai */
+/* gap: 100px; */
+
+    }
+    .box{
+        height: 100px;
+        width: 500px;
+    }
+    .box1{
+        /* ye 0 order pe rahta hai array jaisa */
+        background-color:green;
+
+        /* order2 ka mtlb ki tisra array me , array work karta hai order me  */
+        /* order: 2; */
+        
+    }
+    .box2{
+        background-color: aqua;
+
+        /* box ke size ko increase kr deta hai */
+        /* flex-grow: 2; */
+
+        /* box ke size ko chhota karta hai */
+        /* flex-shrink: 2; */
+
+        /* box ko niche upper ya center me karta hai */
+        align-self: center;
+    }
+    .box3{
+        background-color: brown;
+    }
+</style>
+<body>
+    <!-- flex -->
+    <div class="cont">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+    </div>
+</body>
+</html>

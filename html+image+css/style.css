@@ -1,0 +1,53 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    padding: 20px 10%;
+    height: 18vh;
+}
+header ul{
+    display: flex;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-right: 10%;
+    font-weight: 800;
+
+}
+header ul li:hover{
+    background-color: antiquewhite;
+    color: aqua;
+    font-weight: 1900;
+    
+}
+section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.left-section{
+    width: 40%;
+}
+.left-section p{
+    margin: 20px 0px;
+}
+.left-section button{
+    padding: 10px 5px;
+    font-weight: 700;
+    background-color: green;
+    color: beige;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.right-section img{
+    border-radius: 10px;
+}
+
