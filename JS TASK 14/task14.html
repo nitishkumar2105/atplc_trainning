@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 14 JavaScript</title>
+</head>
+<style>
+    body{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS4YxCGXOUrCWqBPayOqInaiEUjQ-iFtXDtoc4U9-D&s);
+        background-size: cover;
+    }
+</style>
+<body>
+    <center>
+
+        <h2> find negative number</h2>
+        <input type="number" id="num1">
+        <button type="button" onclick="filter()">check</button>
+
+        <h2> difference between a given number and 13, if the number is greater
+            than 13 return double the absolute difference.</h2>
+        <input type="number" id="num5">
+        <input type="number" id="num6">
+        <button type="button" onclick="f()">check</button>
+
+        <h2> fibonacci series number at nth position</h2>
+         <input type="number" placeholder="number" id="no5">
+        <button type="button" onclick="fico()">Get No</button>
+
+        <h2>sum of multiple of 3 and 5 under 100</h2>
+        <button type="button" onclick="mul()">check</button>
+
+
+        <h2>return cube of a number using function object</h2>
+        <input type="number" placeholder="number" id="no3">
+            <button type="button" onclick="cube()">cube</button>
+<br>
+<br>
+<br>
+        
+        <div id="result" style="border:1px solid rgb(175, 28, 28); height: 100px; font-size: 30px; background-color: white;" >all results are here replace</div>
+    </center>
+    <script>
+
+        function filter() {
+            let number = document.getElementById("num1").value;
+            if (number < 0) {
+                document.getElementById("result").innerHTML = "negative no:=)" + number;
+            }
+            else {
+                document.getElementById("result").innerHTML = "it is non-negative number";
+
+            }
+        }
+
+
+
+
+
+      
+        function f() {
+            let num3 = document.getElementById("num5").value;
+            let num4 = document.getElementById("num6").value;
+            let result;
+            if (num3 >= num4) {
+                result = num3 - num4;
+            } else {
+                result = num4 - num3;
+            }
+            if (result > 13) {
+                document.getElementById("result").innerHTML = 2 * result;
+            } else {
+
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+
+        function fico() {
+            var no5 = document.getElementById("no5").value;
+            var base1 = 0, base2 = 1, other;
+            for (let i = 1; i < no5; i++) {
+
+
+                other = base1 + base2;
+                base1 = base2;
+                base2 = other;
+            }
+
+            document.getElementById("result").innerText = "fibonacci series number at " + no5 + " position==" + base1;
+        }
+
+        function mul(){
+            let sum=0;
+            function multi(num) {
+                for(let i=0; i<num;i++){
+                    if(i % 3 === 0 || i % 5 === 0){
+                        sum=sum+1;
+                    }
+                }
+                document.getElementById("result").innerText ="sum of multiple of 3 and 5 under 1000"+sum
+        // document.writeln("sum of multiple of 3 and 5 under 1000"+sum)
+            }
+            multi(1000)
+        }
+
+        function cube() {
+            var no3 = document.getElementById("no3").value;
+            const cube = no3 * no3*no3;
+            document.getElementById("result").innerText = "cube==" + cube;
+        }
+    </script>
+</body>
+
+</html>

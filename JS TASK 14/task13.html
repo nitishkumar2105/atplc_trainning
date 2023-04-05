@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script tut </title>
+</head>
+<style>
+    h2{
+        color: white;
+    }
+    P{
+        color: white;
+    }
+
+</style>
+<body style="background-image: url(https://c4.wallpaperflare.com/wallpaper/975/421/110/windows-10-black-4k-8k-wallpaper-preview.jpg); background-size: cover;">
+    <center>
+        <h2>Name and address</h2>
+        <p id="para1"></p>
+        <br>
+        <h2>check whether value and data-type of two variable are same.</h2>
+        <input type="number" id="input45">
+        <input type="number" id="input21">
+        <button type="button" onclick="checkdata()">check</button>
+       
+        
+        <form>
+           <br>
+            <h2>add two strings and return them with all alphabet capital.</h2>
+            <label style="color: white;">Enter the first string</label>
+            <input type="text" id="input1"><br>
+            <label style="color: white;">Enter the second string</label>
+            <input type="text" id="input2"><br>
+            <button type="button" onclick="addAndCapitalizeStrings()">check</button>
+            <br>
+            <br>
+            <h2>JavaScript program to convert the length of a given string in bytes.</h2>
+            <label style="color: white;">Enter a string:</label>
+            <input type="text" id="input3"><br>
+            <button type="button" onclick="convert()"> check Convert</button>
+             <br>
+             <br>
+             <h2>program to round a number to a specified amount of digits.</h2>
+             <label style="color: aliceblue;">Enter a number</label>
+            <input type="number" id="input4"><br>
+              <label style="color: white;">Enter the number of digits to round to</label>
+              <input type="number" id="digits"><br>
+             <button type="button" onclick="roundNumber()"> check Round</button>
+               <br>
+                <br>
+
+        </form>
+        <div id="result" style="border:1px solid black; height: 100px; font-size: 40px; background-color: red;">all results are here replace</div>
+    </center>
+    <script>
+        //print name and address
+        document.getElementById("para1").innerHTML = "name:NITISH KUMAR   address : NAWADA";
+    
+       
+        function checkdata(){
+            let variable1 = document.getElementById("input45").value;
+            let variable2 = document.getElementById("input21").value;
+
+           if (variable1 === variable2) {
+            document.getElementById("result").innerText='variables are the same.'
+        //    console.log('The value and data type of the variables are the same.');
+        } else {
+            document.getElementById("result").innerText=' variables are different.'
+        //  console.log('The value and/or data type of the variables are different.');
+      }
+     
+        }
+
+        function addAndCapitalizeStrings() {
+      // Get the input value 
+      let input1 = document.getElementById("input1").value;
+      let input2 = document.getElementById("input2").value;
+
+      // adding string
+      let concatenatedString = input1 + input2;
+
+      // Convert all capital string
+      let capitalizedString = concatenatedString.toUpperCase();
+
+      // show in capital on display
+      let resultElement = document.getElementById("result");
+      resultElement.innerText = capitalizedString;
+    }
+     
+    function convert() {
+      // Get the input value 
+      let input = document.getElementById("input3").value;
+
+      // Convert the input string 
+      let byteArray = new TextEncoder().encode(input);
+
+      // show the value of display
+      let resultElement = document.getElementById("result");
+      resultElement.innerText = "The length of the string  " + byteArray.length ;
+    }
+
+
+    function roundNumber() {
+      // Get the input values 
+      let input = parseFloat(document.getElementById("input4").value);
+      let digits = parseInt(document.getElementById("digits").value);
+
+      // Round the input number to the desired number of digits
+      let rounded = roundToDigits(input, digits);
+
+      // show display
+      let resultElement = document.getElementById("result");
+      resultElement.innerText = "The rounded number is " + rounded ;
+    }
+
+    function roundToDigits(num, digits) {
+      // Calculate the factor needed to round to the desired number of digits
+      let factor = Math.pow(10, digits);
+
+      // Round the input number to the desired number of digits
+      let roundedNum = Math.round(num * factor) / factor;
+
+      // Return the rounded number
+      return roundedNum;
+    }
+    </script>
+</body>
+
+</html>

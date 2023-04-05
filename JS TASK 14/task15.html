@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    background-color: aqua;
+  }
+  
+</style>
+<body>
+  <center>
+    <h1>program to sort a JavaScript Array.</h1>
+    <p>Enter a list of numbers separated by commas:</p>
+    <input type="text" id="input11">
+    <button type="button" onclick="sortArray()">Sort</button>
+
+
+    <h1>program to concatenate two array elements and store them in new array.</h1>
+    <p>Enter elements for array 1 separated by commas:</p>
+    <input type="text" id="input1">
+    <p>Enter elements for array 2 separated by commas:</p>
+    <input type="text" id="input2">
+    <br>
+    <button type="button" onclick="concatArrays()">Check Concatenate</button>
+    
+
+    <h1>Remove First Element from Array</h1>
+    <p>Enter elements for array separated by commas:</p>
+    <input type="text" id="input">
+    <br>
+    <button type="button" onclick="removeFirst()">Remove First Element</button>
+   
+    
+    <h1 style="font-size: 50px; margin: 0px; padding: 0px;">RESULT</h1>
+    <p id="result" style="border:1px solid red; height: 150px; margin: 0px; padding: 0px; background-color: white; font-size: 30px;"> all resuts are here replace</p>
+    </center>
+
+    <script>
+      function sortArray() {
+        const input = document.getElementById("input11").value;
+        const arr = input.split(",").map(Number);
+        arr.sort((a, b) => a - b);
+        const output = document.getElementById("result");
+        output.innerText = arr.join(", ");
+      }
+
+      function displayArray(arr, list) {
+        for (const elem of arr) {
+          const li = document.createElement("li");
+          li.innerText = elem;
+          list.appendChild(li);
+        }
+      }
+
+      function concatArrays() {
+        const input1 = document.getElementById("input1").value;
+        const input2 = document.getElementById("input2").value;
+        const arr1 = input1.split(",");
+        const arr2 = input2.split(",");
+        const newArr = arr1.concat(arr2);
+        const list = document.getElementById("result");
+        displayArray(newArr, list);
+      }
+
+
+      function displayArray(arr, list) {
+        for (const elem of arr) {
+          const li = document.createElement("li");
+          li.innerText = elem;
+          list.appendChild(li);
+        }
+      }
+
+      function removeFirst() {
+        const input = document.getElementById("input").value;
+        const arr = input.split(",");
+        arr.shift();
+        const list = document.getElementById("result");
+        list.innerHTML = ""; // clear previous list items
+        displayArray(arr, list);
+      }
+     </script>
+</body>
+</html>
