@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <center>
+        <h1>Basic Information Form</h1>
+        <form id="basic-info-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+    
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone"><br><br>
+    
+          <input type="submit" value="Submit">
+        </form>
+
+        <h2>RESULT</h2>
+        <ul id="result" style="background-color: rgb(210, 52, 52); height: 100px;"></ul>
+    
+    
+        <h1>Change Image on Button Click</h1>
+        <img id="my-image" src="image1.jpg" alt="Image 1">
+        <br><br>
+        <button id="change-image-btn">Change Image</button>
+
+        <h1>Increase and Decrease Font Size on Button Click</h1>
+        <p id="my-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <br>
+        <button id="increase-font-size-btn">Increase Font Size</button>
+        <button id="decrease-font-size-btn">Decrease Font Size</button>
+    
+
+
+        
+        <script>
+          const form = document.querySelector('#basic-info-form');
+          const submittedInfo = document.querySelector('#result');
+    
+          form.addEventListener('submit', (event) => {
+            event.preventDefault();
+    
+            const name = form.elements.name.value;
+            const email = form.elements.email.value;
+            const phone = form.elements.phone.value;
+    
+            const listItem = document.createElement('li');
+            listItem.textContent = `Name: ${name}, Email: ${email}, Phone: ${phone}`;
+            submittedInfo.appendChild(listItem);
+    
+            form.reset();
+          });
+
+
+          const myImage = document.querySelector('#my-image');
+      const changeImageBtn = document.querySelector('#change-image-btn');
+      let imageIndex = 1;
+
+      changeImageBtn.addEventListener('click', () => {
+        if (imageIndex === 1) {
+          myImage.src = 'https://image.shutterstock.com/image-photo/full-hd-image-ladybird-on-260nw-1952398060.jpg';
+          myImage.alt = 'Image 2';
+          imageIndex = 2;
+        } else {
+          myImage.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrWwVf2hpIhmJmIEE2ks_FmFYiS_b1DlvKkBMB0OihH0VlnriihOB6MEW8ztxUL3X52byGiOqlesk&usqp=CAU&ec=48665701';
+          myImage.alt = 'Image 1';
+          imageIndex = 1;
+        }
+      });
+
+      
+      const myParagraph = document.querySelector('#my-paragraph');
+      const increaseFontSizeBtn = document.querySelector('#increase-font-size-btn');
+      const decreaseFontSizeBtn = document.querySelector('#decrease-font-size-btn');
+      let currentFontSize = parseInt(window.getComputedStyle(myParagraph).fontSize);
+
+      increaseFontSizeBtn.addEventListener('click', () => {
+        currentFontSize += 5;
+        myParagraph.style.fontSize = `${currentFontSize}px`;
+      });
+
+      decreaseFontSizeBtn.addEventListener('click', () => {
+        currentFontSize -= 5;
+        myParagraph.style.fontSize = `${currentFontSize}px`;
+      });
+        </script>
+        </center>
+</body>
+</html>
+   
