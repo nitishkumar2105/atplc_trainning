@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+body {
+    background-color: aqua;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #e819b8;
+    border-radius: 10px;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	
+}
+
+nav li {
+	margin-right: 25px;
+}
+.li {
+	margin-right: 3px;
+}
+
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+section {
+	margin-top: 50px;
+}
+
+section h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+section ul, section ol {
+	margin-left: 30px;
+}
+
+section li {
+	margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+</style>
+<body>
+    <header>
+		<h1>Pizza Recipe</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Ingredients</a></li>
+				<li><a href="#">Instructions</a></li>
+                <br>
+                <li class="li"><a href="./index.html" style="color: black;">Home /</a></li>
+                <li class="li"><a href="./index3.html" style="color: black;">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section >
+			<h2>Ingredients</h2>
+			<ul>
+				<li>1 pizza crust</li>
+				<li>1 cup tomato sauce</li>
+				<li>1 cup shredded mozzarella cheese</li>
+				<li>1/4 cup sliced black olives</li>
+				<li>1/4 cup sliced mushrooms</li>
+				<li>1/4 cup diced green bell pepper</li>
+				<li>1/4 cup diced red onion</li>
+				<li>1/4 cup sliced pepperoni</li>
+			</ul>
+		</section>
+		<section >
+			<h2>Instructions</h2>
+			<ol>
+				<li>Preheat oven to 450°F.</li>
+				<li>Spread tomato sauce evenly over pizza crust.</li>
+				<li>Sprinkle shredded mozzarella cheese over tomato sauce.</li>
+				<li>Add black olives, mushrooms, green bell pepper, red onion, and pepperoni on top of cheese.</li>
+				<li>Bake pizza in preheated oven for 10-12 minutes or until crust is golden brown.</li>
+				<li>Remove from oven and let cool for a few minutes before slicing and serving.</li>
+			</ol>
+		</section>
+	</main>
+
+</body>
+</html>

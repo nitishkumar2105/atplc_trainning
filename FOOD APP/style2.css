@@ -1,0 +1,71 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(https://c0.wallpaperflare.com/preview/839/412/980/food-and-drink-pizza-pizzas-tomato.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+.login{
+    width: 400px;
+    overflow: hidden;
+    /* margin auto center me kiya hai bs  */
+    margin: auto;
+    /* margin: 20 0 0 450px; */
+    padding: 80px;
+    background-color: rgb(217, 0, 255);
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+    color:black;
+    font-size:40px;
+    padding: 20px;
+}
+label{
+    color: rgb(20, 227, 227);
+    font-size: 20px;
+}
+
+#username{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 7px;
+
+}
+#password{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 7px;
+
+}
+#log{
+    width: 307px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 7px;
+color: blue;
+}
+
+span{
+
+    font-size: 20px;
+}
+a{
+    /* background-color: rgb(178, 178, 186); */
+    float: right;
+    /* color: black; */
+}
+h2{
+    color: rgb(220, 27, 69);
+}
+

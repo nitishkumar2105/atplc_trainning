@@ -1,0 +1,14 @@
+.contact{
+    width: 400px;
+    overflow: hidden;
+    /* margin auto center me kiya hai bs  */
+    margin: auto;
+    /* margin: 20 0 0 450px; */
+    padding: 80px;
+    background-color: rgb(217, 0, 255);
+    border-radius: 10px;
+}
+body{
+    background-image: url(https://images8.alphacoders.com/399/thumbbig-399004.webp);
+    background-size: cover;
+}

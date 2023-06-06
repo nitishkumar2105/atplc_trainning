@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+</head>
+<style>
+    body {
+        background-color: salmon;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #1fadd4;
+    border-radius: 10px;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #100f0f;
+	text-decoration: none;
+}
+
+section {
+	margin-top: 50px;
+}
+section ul li {
+	list-style: none;
+}
+
+section h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+section p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+section ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -20px;
+}
+
+section li {
+	flex-basis: calc(33.33% - 20px);
+	margin-left: 20px;
+	margin-bottom:10pz;
+}
+
+@media (max-width: 600px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+</style>
+<body>
+    <header>
+		<h1>Pizza Restaurant</h1>
+		<nav>
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./index4.html">Recipes</a></li>
+				<li><a href="./index5.html">About Us</a></li>
+				<li><a href="./index3.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section >
+			<h2 style="color: blue;">About Us</h2>
+			<p>We are a family-owned and operated pizza restaurant that has been serving delicious, authentic Italian pizza since 1995. Our pizza is made with the freshest ingredients and cooked to perfection in our wood-fired oven.</p>
+			<p>In addition to our pizza, we also offer a variety of pasta dishes, salads, and desserts to satisfy any craving. We take pride in providing our customers with a warm and welcoming atmosphere and excellent service.</p>
+			<p>Stop by and try our pizza today!</p>
+		</section>
+		<section >
+			<h2 style="color: blue;">Our Team</h2>
+			<ul>
+				<li>
+					<img src="https://images.unsplash.com/photo-1541876788-2221e585da7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80" alt="Person 1" height="200px" width="220px" style="border-radius: 10px;">
+					<h3>John Doe</h3>
+					<p>Head Chef</p>
+				</li>
+				<li>
+					<img src="https://media.gettyimages.com/id/569339587/photo/fan-club-photo-of-jane-powell-1943.jpg?s=612x612&w=0&k=20&c=GN8qmh2gmQ48GZOR4OrdNJPWLqDpvjqyUDtnuUZpLVs=" alt="Person 2" height="200px" width="220px" style="border-radius: 10px;">
+					<h3>Jane Smith</h3>
+					<p>Server</p>
+				</li>
+				<li>
+					<img src="https://media.gettyimages.com/id/890663258/photo/producer-mark-johnson-attends-the-downsizing-new-york-screening-at-amc-lincoln-square-theater.jpg?s=612x612&w=0&k=20&c=OCWJv7Kxgi9wBYyW1CPoneunRkMT8pw-WjCXu1pcFBE=" alt="Person 3" height="200px" width="220px" style="border-radius: 10px;">
+					<h3>Mark Johnson</h3>
+					<p>Bartender</p>
+				</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Pizza Restaurant. All rights reserved.</p>
+	</footer>
+</body>
+</html>
